@@ -152,55 +152,44 @@ function movArr(...nums) {
 } */
 
 //Recursive functions and loops for getting any nested objects && arrays
-/* let gen = {
-  name: "John",
-  children: [
-    {
-      name: "Jim",
-      children: []
-    },
-    {
-      name: "Zoe",
-      children: [
-        {name: "kyle", children: []},
-        {name: "sophia", children: []}
-      ]
+/* let obj = {
+  name: "Ben",
+  age: 19,
+  nest1: {
+    obj1: [1, 2, 3, [4, 5, 6]],
+    obj2: {
+      lc: [7, 8, [9, [10, [11]], {
+        r: [12, 13, {
+          s: {
+            one: 14,
+            two: 15
+          }
+        }]
+      }]]
     }
-  ]
+  },
+  skill: "Programming"
 }
 
-function loop(nest) {
-  if (Array.isArray(nest)) {
-    for (let a of nest) {
-      if (Array.isArray(a)) arr(a);
-      else if (typeof a === "object") obj(a);
-      else console.log(a);
-    }
-  }
-  else if (typeof nest === "object") {
-    for (let b in nest) {
-      if (Array.isArray(nest[b])) arr(nest[b]);
-      else if(typeof nest[b]==="object") obj(nest[b]);
-      else console.log(nest[b]);
-    }
-  }
-  else console.log(nest);
+function check(a) {
+  if (Array.isArray(a)) Arr(a);
+  else if (typeof a === "object") Obj(a);
+  else console.log(a);
 }
 
-function arr(item) {
-  for (let i of item) {
-    if (Array.isArray(i)) arr(i);
-    else if (typeof i === "object") obj(i);
+function Arr(b) {
+  for (let i of b) {
+    if (Array.isArray(i)) Arr(i);
+    else if (typeof i === "object") Obj(i);
     else console.log(i);
   }
 }
 
-function obj(item) {
-  for (let i in item) {
-    if(Array.isArray(item[i])) arr(item[i]);
-    else if(typeof item[i] === "object") obj(item[i]);
-    else console.log(item[i]);
+function Obj(c) {
+  for (let j in c) {
+    if (Array.isArray(c[j])) Arr(c[j]);
+    else if (typeof c[j] === "object") Obj(c[j]);
+    else console.log(c[j]);
   }
 }
-
-loop(gen) */
+check(obj) */
